@@ -170,16 +170,16 @@ export const portfolioData = {
 
 export const blogData = {
   posts: [
-    // {
-    //   title: 'Building Modern Web Applications with Next.js 15',
-    //   category: 'Development',
-    //   date: 'Mar 15, 2024',
-    //   readTime: '8 min',
-    //   image: '/web-development-coding.png',
-    //   excerpt: 'Deep dive into Next.js 15 features and App Router enhancements.',
-    //   tags: ['Next.js', 'React', 'Web Development'],
-    //   slug: 'building-modern-web-apps-nextjs-15',
-    // },
+    {
+      title: 'Building Modern Web Applications with laravel vue',
+      category: 'Development',
+      date: 'Mar 15, 2026',
+      readTime: '8 min',
+      image: '/web-development-coding.png',
+      excerpt: 'Deep dive Laravel features and App Router enhancements.',
+      tags: ['Vue.js', 'Laravel', 'Web Development'],
+      slug: 'building-modern-web-apps-Laravel',
+    },
     // {
     //   title: 'Microservices Architecture: A Complete Guide',
     //   category: 'Architecture',

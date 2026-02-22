@@ -14,7 +14,7 @@ export function BlogSection({ data = blogData }: BlogSectionProps) {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {/* {data.posts.map((post, index) => (
+        {data.posts.map((post, index) => (
           <article
             key={index}
             className="group bg-secondary rounded-xl md:rounded-2xl border border-border overflow-hidden hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
@@ -44,9 +44,9 @@ export function BlogSection({ data = blogData }: BlogSectionProps) {
                 {post.title}
               </h3>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
-               */}
+              
               {/* Tags */}
-              {/* <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {post.tags.map((tag, i) => (
                   <span
                     key={i}
@@ -55,10 +55,10 @@ export function BlogSection({ data = blogData }: BlogSectionProps) {
                     {tag}
                   </span>
                 ))}
-              </div> */}
+              </div>
 
               {/* Read More Link */}
-              {/* <a
+              <a
                 href={`/blog/${post.slug}`}
                 className="flex items-center gap-2 text-xs md:text-sm text-accent hover:gap-3 transition-all font-medium"
               >
@@ -67,7 +67,7 @@ export function BlogSection({ data = blogData }: BlogSectionProps) {
               </a>
             </div>
           </article>
-        ))} */}
+        ))}
       </div>
     </div>
   )
