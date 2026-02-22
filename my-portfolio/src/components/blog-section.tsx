@@ -63,7 +63,7 @@ export function BlogSection({ data = blogData }: BlogSectionProps) {
                 className="flex items-center gap-2 text-xs md:text-sm text-accent hover:gap-3 transition-all font-medium"
               >
                 Read More
-                <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4" /> 
               </a>
             </div>
           </article>
