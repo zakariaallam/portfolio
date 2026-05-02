@@ -40,8 +40,8 @@ export const aboutData = {
       description: 'Designing intuitive and beautiful user interfaces that enhance user experience.',
     },
   ],
-  testimonials: [] as { avatar: string; name: string; text: string }[],
-  clients: [] as { name: string; logo: string }[],
+  testimonials: [] as Array<{ avatar: string; name: string; text: string }>,
+  clients: [] as Array<{ name: string; logo: string }>,
 }
 
 export const resumeData = {
