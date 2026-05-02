@@ -40,36 +40,8 @@ export const aboutData = {
       description: 'Designing intuitive and beautiful user interfaces that enhance user experience.',
     },
   ],
-  testimonials: [
-    // {
-    //   avatar: '/professional-man.jpg',
-    //   name: 'Daniel Lewis',
-    //   text: 'John was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.',
-    // },
-    // {
-    //   avatar: '/professional-woman-diverse.png',
-    //   name: 'Jessica Miller',
-    //   text: 'John was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.',
-    // },
-    // {
-    //   avatar: '/professional-man.jpg',
-    //   name: 'Michael Chen',
-    //   text: 'Outstanding work! John delivered a high-quality product that exceeded our expectations. His attention to detail is remarkable.',
-    // },
-    // {
-    //   avatar: '/professional-woman-diverse.png',
-    //   name: 'Sarah Johnson',
-    //   text: 'Professional, creative, and highly skilled. John is the developer you want on your team for any complex project.',
-    // },
-  ],
-  clients: [
-    // { name: 'TechCorp', logo: '/tech-company-logo.jpg' },
-    // { name: 'StartupHub', logo: '/startup-logo.png' },
-    // { name: 'DesignStudio', logo: '/design-agency-logo.png' },
-    // { name: 'CodeLabs', logo: '/software-company-logo.png' },
-    // { name: 'WebSolutions', logo: '/web-agency-logo.jpg' },
-    // { name: 'AppMakers', logo: '/app-development-logo.jpg' },
-  ],
+  testimonials: [] as { avatar: string; name: string; text: string }[],
+  clients: [] as { name: string; logo: string }[],
 }
 
 export const resumeData = {

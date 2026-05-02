@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { PenTool, Code, Smartphone, Zap } from 'lucide-react'
 import { aboutData } from '@/lib/portfolio-data'
 
@@ -58,9 +59,11 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
             {[...data.testimonials, ...data.testimonials].map((testimonial, index) => (
               <div key={index} className="flex-shrink-0 w-72 md:w-80 p-4 md:p-6 bg-secondary rounded-xl md:rounded-2xl border border-border">
                 <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-                  <img
+                  <Image
                     src={testimonial.avatar || "/placeholder.svg"}
                     alt={testimonial.name}
+                    width={56}
+                    height={56}
                     className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl object-cover"
                   />
                   <h4 className="text-base md:text-lg font-semibold text-foreground">{testimonial.name}</h4>
@@ -82,9 +85,11 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
                 key={index}
                 className="flex-shrink-0 w-32 h-20 md:w-40 md:h-24 bg-secondary rounded-xl md:rounded-2xl border border-border flex items-center justify-center p-4 md:p-6 hover:border-accent transition-colors"
               >
-                <img
+                <Image
                   src={client.logo || "/placeholder.svg"}
                   alt={client.name}
+                  width={160}
+                  height={96}
                   className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity"
                 />
               </div>

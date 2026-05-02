@@ -32,7 +32,7 @@ export function ResumeSection({ data = resumeData }: ResumeSectionProps) {
       </div>
 
       {/* Experience */}
-      {/* <div>
+      <div>
         <div className="flex items-center gap-2 md:gap-3 mb-6">
           <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-accent" />
           <h3 className="text-xl md:text-2xl font-bold text-foreground">Experience</h3>
@@ -47,7 +47,7 @@ export function ResumeSection({ data = resumeData }: ResumeSectionProps) {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
 
       {/* Skills */}
       <div>
