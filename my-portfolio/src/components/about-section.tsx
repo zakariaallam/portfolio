@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { PenTool, Code, Smartphone, Zap } from 'lucide-react'
-import { aboutData } from '@/lib/portfolio-data'
+import { aboutData, type AboutData, type Testimonial, type Client } from '@/lib/portfolio-data'
 
 const iconMap = {
   Code,
@@ -10,7 +10,7 @@ const iconMap = {
 }
 
 interface AboutSectionProps {
-  data?: typeof aboutData
+  data?: AboutData
 }
 
 export function AboutSection({ data = aboutData }: AboutSectionProps) {
@@ -56,7 +56,7 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">Testimonials</h3>
         <div className="relative overflow-hidden">
           <div className="flex gap-3 md:gap-4 animate-marquee">
-            {[...data.testimonials, ...data.testimonials].map((testimonial, index) => (
+            {[...data.testimonials, ...data.testimonials].map((testimonial: Testimonial, index) => (
               <div key={index} className="flex-shrink-0 w-72 md:w-80 p-4 md:p-6 bg-secondary rounded-xl md:rounded-2xl border border-border">
                 <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
                   <Image
@@ -80,7 +80,7 @@ export function AboutSection({ data = aboutData }: AboutSectionProps) {
         <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6">Clients</h3>
         <div className="relative overflow-hidden py-4">
           <div className="flex gap-4 md:gap-6 animate-marquee-slow">
-            {[...data.clients, ...data.clients].map((client, index) => (
+            {[...data.clients, ...data.clients].map((client: Client, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 w-32 h-20 md:w-40 md:h-24 bg-secondary rounded-xl md:rounded-2xl border border-border flex items-center justify-center p-4 md:p-6 hover:border-accent transition-colors"

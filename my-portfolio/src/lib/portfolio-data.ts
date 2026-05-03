@@ -1,4 +1,19 @@
-export const profileData = {
+export interface ProfileData {
+  name: string;
+  title: string;
+  avatar: string;
+  email: string;
+  phone: string;
+  birthday: string;
+  location: string;
+  social: {
+    github: string;
+    linkdin: string;
+    instagram: string;
+  };
+}
+
+export const profileData: ProfileData = {
   name: 'Zakaria Allam',
   title: 'Full-Stack Developer',
   avatar: '/my_photo.png',
@@ -13,7 +28,31 @@ export const profileData = {
   },
 }
 
-export const aboutData = {
+export interface Service {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface Testimonial {
+  avatar: string;
+  name: string;
+  text: string;
+}
+
+export interface Client {
+  name: string;
+  logo: string;
+}
+
+export interface AboutData {
+  description: string[];
+  services: Service[];
+  testimonials: Testimonial[];
+  clients: Client[];
+}
+
+export const aboutData: AboutData = {
   description: [
     "I'm a Full-Stack Developer from Youssoufia, Morocco, specializing in web development and creating innovative digital solutions. I enjoy turning complex problems into simple, beautiful and intuitive applications.",
     "My job is to build your website or application so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I've worked with various technologies including React, PHP, Laravel, Node.js, and modern cloud platforms.",
@@ -40,11 +79,34 @@ export const aboutData = {
       description: 'Designing intuitive and beautiful user interfaces that enhance user experience.',
     },
   ],
-  testimonials: [] as Array<{ avatar: string; name: string; text: string }>,
-  clients: [] as Array<{ name: string; logo: string }>,
+  testimonials: [],
+  clients: [],
 }
 
-export const resumeData = {
+export interface Education {
+  title: string;
+  period: string;
+  description: string;
+}
+
+export interface Experience {
+  title: string;
+  period: string;
+  description: string;
+}
+
+export interface Skill {
+  name: string;
+  level: number;
+}
+
+export interface ResumeData {
+  education: Education[];
+  experience: Experience[];
+  skills: Skill[];
+}
+
+export const resumeData: ResumeData = {
   education: [
     {
       title: 'YouCode  OCP, UM6P',
@@ -80,7 +142,22 @@ export const resumeData = {
   ],
 }
 
-export const portfolioData = {
+export interface Project {
+  title: string;
+  category: string;
+  image: string;
+  description: string;
+  tech: string[];
+  liveUrl: string;
+  githubUrl: string;
+}
+
+export interface PortfolioData {
+  categories: string[];
+  projects: Project[];
+}
+
+export const portfolioData: PortfolioData = {
   categories: ['all', 'web design', 'applications', 'web development'],
   projects: [
     {
@@ -140,7 +217,22 @@ export const portfolioData = {
   ],
 }
 
-export const blogData = {
+export interface Post {
+  title: string;
+  category: string;
+  date: string;
+  readTime: string;
+  image: string;
+  excerpt: string;
+  tags: string[];
+  slug: string;
+}
+
+export interface BlogData {
+  posts: Post[];
+}
+
+export const blogData: BlogData = {
   posts: [
     {
       title: 'Building Modern Web Applications with laravel vue',
@@ -205,7 +297,14 @@ export const blogData = {
   ],
 }
 
-export const contactData = {
+export interface ContactData {
+  email: string;
+  phone: string;
+  location: string;
+  mapEmbedUrl: string;
+}
+
+export const contactData: ContactData = {
   email: 'zakariaallam536@gmail.com',
   phone: '+2126 051-376-09',
   location: 'Youssoufia, MAR',
